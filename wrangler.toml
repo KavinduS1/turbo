@@ -1,0 +1,17 @@
+name = "web-scraper-worker"
+main = "worker.js"
+compatibility_date = "2023-10-30"
+
+# Configure KV namespace for static assets
+kv_namespaces = [
+  { binding = "STATIC_ASSETS", id = "your-kv-namespace-id-here" }
+]
+
+# Add JSZip as a dependency
+[build.upload]
+format = "modules"
+
+# Add dependencies
+[dependencies]
+jszip = "3.10.1"
+linkedom = "0.16.6"

@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 
 // --- Middleware ---
 app.use(express.json()); // Parse JSON request bodies
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
+app.use(express.static(path.join(__dirname, 'docs'))); // Serve static files
 
 // --- Helper Function: Sanitize filename ---
 function sanitizeFilename(filename) {
